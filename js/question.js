@@ -57,4 +57,15 @@ let questions = [
       "eXamine Multiple Language"
     ]
   },
+    {
+    numb: 6,
+    question: "HTML é uma linguagem de?",
+    answer: "Formatação.",
+    options: [
+      "Programação.",
+      "Visualização.",
+      "Programação de web.",
+      "Formatação."
+    ]
+  },
 ];
