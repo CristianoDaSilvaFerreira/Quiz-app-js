@@ -1,0 +1,23 @@
+/* importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --background: #007bff;
+    --selection: #fff;
+}
+
+body {
+    background: var(--background);
+}
+
+::selection {
+    color: var(--selection);
+    background: var(--background);
+}
+
