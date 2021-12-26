@@ -7,18 +7,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-:root {
-    --primary: #007bff;
-    --secondary: #fff;
-}
-
 body{
-    background: var(--primary);
+    background: #007bff;
 }
 
 ::selection{
-    color: var(--secondary);
-    background: var(--primary);
+    color: #fff;
+    background: #007bff;
 }
 
 .start_btn,
@@ -45,18 +40,18 @@ body{
 .start_btn button{
     font-size: 25px;
     font-weight: 500;
-    color: var(--primary);
+    color: #007bff;
     padding: 15px 30px;
     outline: none;
     border: none;
     border-radius: 5px;
-    background: var(--secondary);
+    background: #fff;
     cursor: pointer;
 }
 
 .info_box{
     width: 540px;
-    background: var(--secondary);
+    background: #fff;
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
@@ -87,7 +82,7 @@ body{
 
 .info_box .info-list .info span{
     font-weight: 600;
-    color: var(--primary);
+    color: #007bff;
 }
 .info_box .buttons{
     height: 60px;
@@ -114,7 +109,7 @@ body{
 
 .quiz_box{
     width: 550px;
-    background: var(--secondary);
+    background: #fff;
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
@@ -127,7 +122,7 @@ body{
     z-index: 2;
     height: 70px;
     padding: 0 30px;
-    background: var(--secondary);
+    background: #fff;
     border-radius: 5px 5px 0 0;
     display: flex;
     align-items: center;
@@ -164,7 +159,7 @@ body{
     font-weight: 500;
     height: 30px;
     width: 45px;
-    color: var(--secondary);
+    color: #fff;
     border-radius: 5px;
     line-height: 30px;
     text-align: center;
@@ -178,12 +173,12 @@ body{
     bottom: 0px;
     left: 0px;
     height: 3px;
-    background: var(--primary);
+    background: #007bff;
 }
 
 section{
     padding: 25px 30px 20px 30px;
-    background: var(--secondary);
+    background: #fff;
 }
 
 section .que_text{
@@ -290,10 +285,10 @@ footer button{
     cursor: pointer;
     border: none;
     outline: none;
-    color: var(--secondary);
+    color: #fff;
     border-radius: 5px;
-    background: var(--primary);
-    border: 1px solid --primary;
+    background: #007bff;
+    border: 1px solid #007bff;
     line-height: 10px;
     opacity: 0;
     pointer-events: none;
@@ -312,7 +307,7 @@ footer button.show{
 }
 
 .result_box{
-    background: var(--secondary);
+    background: #fff;
     border-radius: 5px;
     display: flex;
     padding: 25px 30px;
@@ -328,7 +323,7 @@ footer button.show{
 
 .result_box .icon{
     font-size: 100px;
-    color: var(--primary);
+    color: #007bff;
     margin-bottom: 10px;
 }
 
@@ -364,13 +359,13 @@ footer button.show{
     border: none;
     outline: none;
     border-radius: 5px;
-    border: 1px solid var(--primary);
+    border: 1px solid #007bff;
     transition: all 0.3s ease;
 }
 
 .buttons button.restart{
-    color: var(--secondary);
-    background: var(--primary);
+    color: #fff;
+    background: #007bff;
 }
 
 .buttons button.restart:hover{
@@ -378,11 +373,11 @@ footer button.show{
 }
 
 .buttons button.quit{
-    color: var(--primary);
-    background: var(--secondary);
+    color: #007bff;
+    background: #fff;
 }
 
 .buttons button.quit:hover{
-    color: var(--secondary);
-    background: var(--primary);
+    color: #fff;
+    background: #007bff;
 }
