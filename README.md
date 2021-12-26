@@ -15,5 +15,6 @@ Um jogo de perguntas e resposta feito em JavaScript, no qual poderá testa seus 
 ## Jogar
 
 Para iniciar o jogo, basta entra no link e ler as regras e se divertir testando seus conhecimentos.
+<a href="https://cristianodasilvaferreira.github.io/Quiz-app-js/" target="_blank">APP QUIZ</a>
 
 ![3](https://user-images.githubusercontent.com/68359459/147413492-b0e4c987-f328-458b-bcb6-dd57f1c76144.png)
