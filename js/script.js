@@ -1,4 +1,6 @@
 // selecionando todos os elementos necessários
+/*jshint esversion: 6 */ 
+/*jshint -W033 */
 const start_btn = document.querySelector(".start_btn button");
 const info_box = document.querySelector(".info_box");
 const exit_btn = info_box.querySelector(".buttons .quit");
@@ -89,8 +91,8 @@ next_btn.onclick = ()=>{
     }
 }
 
+
 // recebendo perguntas e opções de array
-/*jshint esversion: 6 */
 function showQuetions(index){
     const que_text = document.querySelector(".que_text");
 
@@ -112,7 +114,6 @@ let tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>';
 let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
 // se o usuário clicou na opção
-/*jshint esversion: 6 */
 function optionSelected(answer){
     clearInterval(counter); //contador limpo
     clearInterval(counterLine); //limpar contra-linha
