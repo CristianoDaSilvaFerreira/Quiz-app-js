@@ -56,7 +56,7 @@ restart_quiz.onclick = ()=>{
     clearInterval(counterLine); //limpar contra-linha
     startTimer(timeValue); //chamando a função startTimer
     startTimerLine(widthValue); //chamar a função startTimerLine
-    timeText.textContent = "Time Left"; //mude o texto de timeText para Time Left
+    timeText.textContent = "Tempo restante"; //mude o texto de timeText para Time Left
     next_btn.classList.remove("show"); //esconda o próximo botão
 }
 
@@ -90,15 +90,13 @@ next_btn.onclick = ()=>{
 }
 
 // recebendo perguntas e opções de array
+/*jshint esversion: 6 */
 function showQuetions(index){
     const que_text = document.querySelector(".que_text");
 
     //criando um novo span e tag div para pergunta e opção e passando o valor usando o índice de array
     let que_tag = '<span>'+ questions[index].numb + ". " + questions[index].question +'</span>';
-    let option_tag = '<div class="option"><span>'+ questions[index].options[0] +'</span></div>'
-    + '<div class="option"><span>'+ questions[index].options[1] +'</span></div>'
-    + '<div class="option"><span>'+ questions[index].options[2] +'</span></div>'
-    + '<div class="option"><span>'+ questions[index].options[3] +'</span></div>';
+    let option_tag = `<div class="option"><span>${questions[index].options[0]}</span></div><div class="option"><span>${questions[index].options[1]}</span></div><div class="option"><span>${questions[index].options[2]}</span></div><div class="option"><span>${questions[index].options[3]}</span></div>`;
     que_text.innerHTML = que_tag; //adicionar nova tag span dentro de que_tag
     option_list.innerHTML = option_tag; //adicionar nova tag div dentro de option_tag
     
@@ -114,11 +112,12 @@ let tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>';
 let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
 // se o usuário clicou na opção
+/*jshint esversion: 6 */
 function optionSelected(answer){
     clearInterval(counter); //contador limpo
     clearInterval(counterLine); //limpar contra-linha
     let userAns = answer.textContent; //obtendo a opção selecionada pelo usuário
-    let correcAns = questions[que_count].answer; //obtendo a resposta correta da matriz
+    let correcAns = questions[que_count].answer; //obtendo a resposta correta da matriz    
     const allOptions = option_list.children.length; //obtendo todos os itens opcionais
     
     //se a opção selecionada pelo usuário for igual à resposta correta da matriz
@@ -162,15 +161,15 @@ function showResult(){
     // se o usuário pontuou mais de 3
     if (userScore > 3){ 
         // criando uma nova tag de span e passando o número de pontuação do usuário e o número total de perguntas
-        let scoreTag = '<span>and congrats! 🎉, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>parabéns! 🎉, você tem <p>'+ userScore +'</p> de <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;  //adicionar nova tag de span dentro de score_Text
     }
     else if(userScore > 1){ // se o usuário pontuou mais de 1
-        let scoreTag = '<span>and nice 😎, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>legal 😎, você fez <p>'+ userScore +'</p> de <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
     else{ // se o usuário pontuou menos de 1
-        let scoreTag = '<span>and sorry 😐, You got only <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>desculpe 😐, você só tem <p>'+ userScore +'</p> de <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
 }
@@ -186,7 +185,7 @@ function startTimer(time){
         }
         if(time < 0){ //se o cronômetro for menor que 0
             clearInterval(counter); //contador limpo
-            timeText.textContent = "Time Off"; //mude o texto da hora para hora de folga
+            timeText.textContent = "Intervalo"; //mude o texto da hora para hora de folga
             const allOptions = option_list.children.length; //obtendo todos os itens opcionais
             let correcAns = questions[que_count].answer; //obtendo a resposta correta da matriz
             for(i=0; i < allOptions; i++){
@@ -217,6 +216,6 @@ function startTimerLine(time){
 
 function queCounter(index){
     //criando uma nova tag de span e passando o número da pergunta e a pergunta total
-    let totalQueCounTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Questions</span>';
+    let totalQueCounTag = '<span><p>'+ index +'</p> de <p>'+ questions.length +'</p> Questions</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adicionar nova tag span dentro de bottom_ques_counter
 }
